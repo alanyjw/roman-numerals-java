@@ -42,4 +42,18 @@ public class RomanNumeralsToDecimalConverterTest {
         assertThat(subject.run("XIX")).isEqualTo(19);
         assertThat(subject.run("XX")).isEqualTo(20);
     }
+
+    @Test
+    public void runConvertsRomanNumeralsFortyOneToFifty() throws Exception {
+        assertThat(subject.run("XLI")).isEqualTo(41);
+        assertThat(subject.run("XLII")).isEqualTo(42);
+        assertThat(subject.run("XLIII")).isEqualTo(43);
+        assertThat(subject.run("XLIV")).isEqualTo(44);
+        assertThat(subject.run("XLV")).isEqualTo(45);
+        assertThat(subject.run("XLVI")).isEqualTo(46);
+        assertThat(subject.run("XLVII")).isEqualTo(47);
+        assertThat(subject.run("XLVIII")).isEqualTo(48);
+        assertThat(subject.run("XLIX")).isEqualTo(49);
+        assertThat(subject.run("L")).isEqualTo(50);
+    }
 }

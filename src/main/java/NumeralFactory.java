@@ -11,6 +11,9 @@ class NumeralFactory {
             case 'X':
                 numeral = new Ten();
                 break;
+            case 'L':
+                numeral = new Fifty();
+                break;
             default:
                 numeral = null;
         }
