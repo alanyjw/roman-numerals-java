@@ -12,16 +12,16 @@ public class RomanNumeralsToDecimalConverter {
                     break;
                 case 'V':
                     if (previousLetter == 'I') {
-                        result = 4;
+                        result += 3;
                     } else {
-                        result = 5;
+                        result += 5;
                     }
                     break;
                 case 'X':
                     if (previousLetter == 'I') {
-                        result = 9;
+                        result += 8;
                     } else {
-                        result = 10;
+                        result += 10;
                     }
                     break;
             }
