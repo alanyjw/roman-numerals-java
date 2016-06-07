@@ -17,6 +17,13 @@ public class RomanNumeralsToDecimalConverter {
                         result = 5;
                     }
                     break;
+                case 'X':
+                    if (previousLetter == 'I') {
+                        result = 9;
+                    } else {
+                        result = 10;
+                    }
+                    break;
             }
             previousLetter = letter;
         }
