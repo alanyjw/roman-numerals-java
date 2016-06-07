@@ -15,7 +15,7 @@ class NumeralFactory {
                 numeral = new Fifty();
                 break;
             default:
-                numeral = null;
+                numeral = new Null();
         }
         return numeral;
     }

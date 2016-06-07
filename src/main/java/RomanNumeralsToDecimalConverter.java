@@ -4,7 +4,7 @@ public class RomanNumeralsToDecimalConverter {
 
         int result = 0;
 
-        Numeral previous = null;
+        Numeral previous = new Null();
         for (char letter : letters) {
             Numeral numeral = NumeralFactory.createNumeralInstance(letter);
 
