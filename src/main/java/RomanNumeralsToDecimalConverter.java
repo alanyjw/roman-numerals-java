@@ -4,13 +4,13 @@ public class RomanNumeralsToDecimalConverter {
 
         int result = 0;
 
-        char previousLetter = '\0';
+        Numeral previous = null;
         for (char letter : letters) {
             Numeral numeral = NumeralFactory.createNumeralInstance(letter);
 
-            result += numeral.value(previousLetter);
+            result += numeral.value(previous);
 
-            previousLetter = letter;
+            previous = numeral;
         }
         return result;
     }

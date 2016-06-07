@@ -1,8 +1,8 @@
 class Ten implements Numeral {
     public int value() { return 10; }
 
-    public int value(char previousLetter) {
-        if (previousLetter == 'I') return 8;
+    public int value(Numeral previous) {
+        if (previous instanceof One) return 8;
         return value();
     }
 }

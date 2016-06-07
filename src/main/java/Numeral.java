@@ -1,4 +1,4 @@
 interface Numeral {
     int value();
-    int value(char previousLetter);
+    int value(Numeral previous);
 }
