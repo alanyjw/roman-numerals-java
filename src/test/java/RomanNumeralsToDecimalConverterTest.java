@@ -56,4 +56,32 @@ public class RomanNumeralsToDecimalConverterTest {
         assertThat(subject.run("XLIX")).isEqualTo(49);
         assertThat(subject.run("L")).isEqualTo(50);
     }
+
+    @Test
+    public void runConvertsRomanNumeralsFiftyOneToSixty() throws Exception {
+        assertThat(subject.run("LI")).isEqualTo(51);
+        assertThat(subject.run("LII")).isEqualTo(52);
+        assertThat(subject.run("LIII")).isEqualTo(53);
+        assertThat(subject.run("LIV")).isEqualTo(54);
+        assertThat(subject.run("LV")).isEqualTo(55);
+        assertThat(subject.run("LVI")).isEqualTo(56);
+        assertThat(subject.run("LVII")).isEqualTo(57);
+        assertThat(subject.run("LVIII")).isEqualTo(58);
+        assertThat(subject.run("LIX")).isEqualTo(59);
+        assertThat(subject.run("LX")).isEqualTo(60);
+    }
+
+    @Test
+    public void runConvertsRomanNumeralsNinetyOneToHundred() throws Exception {
+        assertThat(subject.run("XCI")).isEqualTo(91);
+        assertThat(subject.run("XCII")).isEqualTo(92);
+        assertThat(subject.run("XCIII")).isEqualTo(93);
+        assertThat(subject.run("XCIV")).isEqualTo(94);
+        assertThat(subject.run("XCV")).isEqualTo(95);
+        assertThat(subject.run("XCVI")).isEqualTo(96);
+        assertThat(subject.run("XCVII")).isEqualTo(97);
+        assertThat(subject.run("XCVIII")).isEqualTo(98);
+        assertThat(subject.run("XCIX")).isEqualTo(99);
+        assertThat(subject.run("C")).isEqualTo(100);
+    }
 }

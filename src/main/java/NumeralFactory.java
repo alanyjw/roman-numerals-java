@@ -14,6 +14,9 @@ class NumeralFactory {
             case 'L':
                 numeral = new Fifty();
                 break;
+            case 'C':
+                numeral = new Hundred();
+                break;
             default:
                 numeral = new Null();
         }
