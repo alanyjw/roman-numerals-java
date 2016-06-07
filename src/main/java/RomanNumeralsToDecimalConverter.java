@@ -8,25 +8,59 @@ public class RomanNumeralsToDecimalConverter {
         for (char letter : letters) {
             switch (letter) {
                 case 'I':
-                    result += 1;
+                    result += new One(previousLetter).compute();
                     break;
                 case 'V':
-                    if (previousLetter == 'I') {
-                        result += 3;
-                    } else {
-                        result += 5;
-                    }
+                    result += new Five(previousLetter).compute();
                     break;
                 case 'X':
-                    if (previousLetter == 'I') {
-                        result += 8;
-                    } else {
-                        result += 10;
-                    }
+                    result += new Ten(previousLetter).compute();
                     break;
             }
             previousLetter = letter;
         }
         return result;
+    }
+
+    private class One {
+        private final char previousLetter;
+
+        public One(char previousLetter) {
+            this.previousLetter = previousLetter;
+        }
+
+        public int compute() {
+            return 1;
+        }
+    }
+
+    private class Five {
+        private final char previousLetter;
+
+        public Five(char previousLetter) {
+            this.previousLetter = previousLetter;
+        }
+
+        public int compute() {
+            if (previousLetter == 'I') {
+                return 3;
+            }
+            return 5;
+        }
+    }
+
+    private class Ten {
+        private final char previousLetter;
+
+        public Ten(char previousLetter) {
+            this.previousLetter = previousLetter;
+        }
+
+        public int compute() {
+            if (previousLetter == 'I') {
+                return 8;
+            }
+            return 10;
+        }
     }
 }
